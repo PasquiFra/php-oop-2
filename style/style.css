@@ -1,0 +1,58 @@
+header {
+    height: 200px;
+    padding: 0 50px;
+    padding-top: 30px;
+
+    background-color: yellowgreen;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+#top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+header .input-group {
+    width: 300px;
+}
+
+nav#bottom-header {
+    padding: 0 0;
+    padding-top: 50px;
+    width: 100%;
+}
+
+ul {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+header nav li {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+
+    text-align: center;
+    flex-basis: calc(100% / 4);
+}
+
+header nav li:hover {
+    background-color: rgba(0, 0, 0, 0.219);
+}
+
+.card picture {
+    width: 20px;
+    height: 20px;
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+}
