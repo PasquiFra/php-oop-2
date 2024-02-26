@@ -64,6 +64,25 @@ require_once __DIR__ . '\database\data.php';
                         <div class="card-body">
                             <h4 class="card-title"><?= $prod->getShortTitle($prod->prod_name) ?></h4>
                             <p>Descrizione: "<?=$prod->prod_name?>"</p>
+                            <div>Prezzo: 
+                                <?php if ($prod->discount):?>
+                                <span class="text-decoration-line-through">
+                                    <?= $prod->price ?>
+                                    €
+                                </span> 
+                                <?php endif ;?>                              
+                                <span class="<?= $prod->discount ? 'text-danger' : '' ?> mx-1">
+                                    <strong><?= number_format($prod->setDiscount($prod->price, $prod->discount), 2) ?>€</strong>
+                                </span>                            
+                            </div>
+                            <div>
+                                <span class="label <?= $prod->cat_name ? 'main-cat' : '' ?>">
+                                    <?=$prod->cat_name?>
+                                </span>
+                                <span class="label <?= $prod->subcat_name ? 'sub-cat' : '' ?>">
+                                    <?=$prod->subcat_name?>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>

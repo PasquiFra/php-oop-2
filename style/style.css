@@ -15,6 +15,10 @@ header {
 
 }
 
+main {
+    padding: 50px 0;
+}
+
 #top-header {
     display: flex;
     justify-content: space-between;
@@ -58,6 +62,8 @@ header nav li:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: relative;
 }
 
 .card img {
@@ -68,4 +74,26 @@ header nav li:hover {
 
 .card .card-body h4 {
     font-weight: 700;
+}
+
+.label {
+
+    color: white;
+
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    position: absolute;
+}
+
+.main-cat {
+    background-color: rgba(30, 209, 200, 0.61);
+    top: 5px;
+    left: 5px
+}
+
+.sub-cat {
+    background-color: rgba(209, 30, 30, 0.61);
+    top: 5px;
+    right: 5px;
 }
