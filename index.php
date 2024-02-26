@@ -55,17 +55,21 @@ require_once __DIR__ . '\database\data.php';
     </header>
 
     <main>
-    <?php foreach ($prods as $prod): ?>
-            <div class="card">
-                <h3>
-                    <?= var_dump($prods);
-                    $prod->name ?> 
-                </h3>
-                <picture>
-                    <img src="<?= $prod->img ?>" alt="<?= $prod->$name or $sub_name ?>">
-                </picture>
+        <div class="container">
+            <div class="row">
+                <?php foreach ($prods as $prod): ?>
+                <div class="col p-2">
+                    <div class="card">
+                        <img class="card-img-top" src="<?= $prod->img ?>" alt="<?= $prod->prod_name ?>">
+                        <div class="card-body">
+                            <h4 class="card-title"><?= $prod->getShortTitle($prod->prod_name) ?></h4>
+                            <p>Descrizione: "<?=$prod->prod_name?>"</p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?> 
             </div>
-    <?php endforeach; ?> 
+        </div>
     </main>
 
 

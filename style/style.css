@@ -1,3 +1,7 @@
+.container {
+    width: 1000px;
+}
+
 header {
     height: 200px;
     padding: 0 50px;
@@ -47,12 +51,21 @@ header nav li:hover {
     background-color: rgba(0, 0, 0, 0.219);
 }
 
-.card picture {
-    width: 20px;
-    height: 20px;
+.card {
+    height: 400px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card img {
-    width: 50px;
-    height: 50px;
+    padding: 10px;
+    width: 75%;
+    height: auto;
+}
+
+.card .card-body h4 {
+    font-weight: 700;
 }

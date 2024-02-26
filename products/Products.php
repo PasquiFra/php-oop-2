@@ -13,16 +13,19 @@ class Products extends Subcat{
         parent::__construct($this->cat, $this->subcat);
     }
 
-    public function generateProducts (){
-        foreach ($products as $product) {
-            $prod = new Products($product['name'], $product['img'], $product['cat'], $product['subcat']);
-            $prods[] = $prod;
-        }
+    public function getShortTitle($title){
+        $name_words = explode(' ', $title);
+        $name_word = implode(' ', array_slice($name_words, 0, 3));
+        return $name_word;
     }
 }
 
 $prods = [];
 
+foreach ($products as $product) {
+    $prod = new Products($product['name'], $product['img'], $product['cat'], $product['subcat']);
+    $prods[] = $prod;
+}
 
 
 
